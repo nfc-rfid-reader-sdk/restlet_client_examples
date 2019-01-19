@@ -1,0 +1,59 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "multipart/form-data",
+          "items": [
+            {
+              "enabled": true,
+              "type": "File",
+              "name": "file"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "query",
+              "value": "{\"operation\":\"verify\",\"user_id\":0,\"security_token\":\"\"}"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "signatureverifier.d-logic.com",
+        "path": "/x509-verifier.php"
+      },
+      "id": "b6f5e755-7b60-4504-9445-f56b3e12a3e1",
+      "lastModified": "2019-01-09T09:49:18.069+01:00",
+      "name": "proxy-x509-verifier",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "metaInfo": {}
+    }
+  ]
+}

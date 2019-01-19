@@ -1,0 +1,59 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "multipart/form-data",
+          "items": [
+            {
+              "enabled": true,
+              "type": "File",
+              "name": "file"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "query",
+              "value": "{\"operation\":\"verify\",\"user_id\":0,\"security_token\":\"\"}"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "name": "http",
+          "version": "V11"
+        },
+        "host": "signatureverifier.d-logic.com",
+        "path": "/pdf-sgn-verifier.php"
+      },
+      "id": "59ff4a8c-a4b2-41cb-8e9f-ab2e7ec70e4f",
+      "lastModified": "2019-01-09T10:02:38.642+01:00",
+      "name": "proxy-pdf-sgn-verifier",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "metaInfo": {}
+    }
+  ]
+}
